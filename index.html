@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskNest - My Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <span class="brand-icon">TN</span>
+            <span>TaskNest</span>
+        </div>
+        <p class="header-label">YOUR PERSONAL WORKSPACE</p>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">PLAN YOUR DAY</p>
+            <h1>Small steps. Big progress.</h1>
+            <p class="subtitle">
+                Keep your tasks organized and make today count.
+            </p>
+        </section>
+
+        <section class="task-panel">
+            <h2>Create a task</h2>
+            <form id="taskForm">
+                <label for="taskTitle">What needs to get done?</label>
+                <div class="input-row">
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="e.g. Finish my assignment"
+                        required
+                    >
+                    <button type="submit" class="add-button">
+                        + Add task
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR WORKLOAD</p>
+                    <h2>My tasks</h2>
+                </div>
+                <span id="taskCount" class="task-count">0 tasks</span>
+            </div>
+
+            <nav class="filters" aria-label="Filter tasks">
+                <button type="button" class="filter-button active"
+                    data-filter="all">All</button>
+                <button type="button" class="filter-button"
+                    data-filter="todo">To do</button>
+                <button type="button" class="filter-button"
+                    data-filter="in-progress">In progress</button>
+                <button type="button" class="filter-button"
+                    data-filter="done">Done</button>
+            </nav>
+
+            <ul id="taskList" class="task-list">
+                <!-- JavaScript will render tasks here. -->
+            </ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks here yet. Add a task to get started!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>TaskNest · One task at a time.</p>
+    </footer>
+</body>
+</html>
