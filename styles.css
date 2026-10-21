@@ -1,0 +1,320 @@
+
+/* ---------- General page styling ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6fa;
+    color: #252941;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7e8ef;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #635bdb;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.header-label {
+    color: #888ba0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* ---------- Main content ---------- */
+
+.container {
+    width: min(760px, 90%);
+    margin: 0 auto;
+}
+
+.welcome {
+    padding: 48px 0 30px;
+}
+
+.eyebrow {
+    color: #635bdb;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.welcome h1 {
+    margin: 12px 0;
+    font-size: clamp(28px, 5vw, 38px);
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    color: #777b91;
+    line-height: 1.6;
+}
+
+/* ---------- Task creation panel ---------- */
+
+.task-panel,
+.tasks-section {
+    padding: 25px;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border: 1px solid #e8e9f0;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(30, 35, 70, 0.04);
+}
+
+.task-panel h2,
+.tasks-section h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.task-panel label {
+    display: block;
+    margin-bottom: 10px;
+    color: #686c81;
+    font-size: 13px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.input-row input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #dfe1eb;
+    border-radius: 9px;
+    outline: none;
+}
+
+.input-row input:focus {
+    border-color: #635bdb;
+    box-shadow: 0 0 0 3px rgba(99, 91, 219, 0.12);
+}
+
+.add-button {
+    padding: 13px 18px;
+    color: #ffffff;
+    background: #635bdb;
+    border: none;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.add-button:hover {
+    background: #5048c5;
+}
+
+/* ---------- Task list heading ---------- */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 8px;
+}
+
+.task-count {
+    padding: 7px 11px;
+    color: #635bdb;
+    background: #f0efff;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* ---------- Filters ---------- */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.filter-button {
+    padding: 9px 13px;
+    color: #777b91;
+    background: #ffffff;
+    border: 1px solid #e5e6ee;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.filter-button:hover {
+    border-color: #635bdb;
+    color: #635bdb;
+}
+
+.filter-button.active {
+    color: #ffffff;
+    background: #635bdb;
+    border-color: #635bdb;
+}
+
+/* ---------- Task items ---------- */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Classes for elements created by app.ts */
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid #e9eaf1;
+    border-radius: 11px;
+}
+
+.task-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.task-title {
+    margin: 0 0 9px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.task-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-todo {
+    color: #9a6815;
+    background: #fff3d8;
+}
+
+.status-in-progress {
+    color: #275ec5;
+    background: #e8f0ff;
+}
+
+.status-done {
+    color: #16815b;
+    background: #ddf7eb;
+}
+
+.advance-button {
+    flex-shrink: 0;
+    padding: 9px 12px;
+    color: #635bdb;
+    background: #f0efff;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.advance-button:hover {
+    background: #e4e1ff;
+}
+
+/* ---------- Empty state and footer ---------- */
+
+.empty-message {
+    padding: 24px 8px;
+    color: #898ca0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer {
+    padding: 25px;
+    color: #9295a7;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ---------- Mobile layout ---------- */
+
+@media (max-width: 520px) {
+    .header {
+        padding: 16px 5%;
+    }
+
+    .header-label {
+        max-width: 110px;
+        text-align: right;
+        line-height: 1.5;
+    }
+
+    .welcome {
+        padding-top: 32px;
+    }
+
+    .task-panel,
+    .tasks-section {
+        padding: 18px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .add-button {
+        width: 100%;
+    }
+
+    .task-item {
+        align-items: flex-start;
+    }
+}
